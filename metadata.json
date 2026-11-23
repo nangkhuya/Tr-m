@@ -1,0 +1,6 @@
+{
+  "name": "Trà Đàm — Không Gian Thưởng Trà & Đàm Đạo",
+  "description": "Mạng xã hội chậm mang mỹ học Thiền và Wabi-sabi, nơi thưởng trà, đàm đạo sâu sắc cùng Trà Chủ và lưu giữ Trà Ký nghệ thuật.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
