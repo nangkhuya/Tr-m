@@ -160,7 +160,7 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
       <section
         ref={sectionRef}
         aria-label="Đồng hồ cát phiên trà"
-        className="mt-6 rounded-2xl bg-[#F4EFE6]/65 dark:bg-[#201E1B]/90 border border-[#2C2C2C]/10 dark:border-[#EAE4D9]/12 px-5 py-4 sm:px-6 sm:py-4 transition-colors duration-500"
+        className="mt-6 rounded-2xl bg-[#E8DFCE]/78 dark:bg-[#1B1916]/90 border border-[#1B1917]/12 dark:border-[#EDE5D5]/12 px-5 py-4 sm:px-6 sm:py-4 transition-colors duration-500"
       >
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           {/* Left: Minimalist SVG Hourglass + Countdown + Contemplation */}
@@ -177,7 +177,7 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
-                className="text-[#8C6D53] dark:text-[#B79373]"
+                className="text-[#7D5E43] dark:text-[#BEA080]"
               >
                 <defs>
                   <clipPath id={topClipId}>
@@ -219,8 +219,8 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
                       y={topSandY}
                       width="30"
                       height={42 - topSandY}
-                      fill="#C8A984"
-                      fillOpacity="0.82"
+                      fill="#C4A27A"
+                      fillOpacity="0.84"
                     />
                   </g>
                 )}
@@ -231,7 +231,7 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
                     y1="42"
                     x2="32"
                     y2="73"
-                    stroke="#C8A984"
+                    stroke="#C4A27A"
                     strokeWidth="1.35"
                     strokeLinecap="round"
                     className="animate-sand-stream"
@@ -242,8 +242,8 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
                   <g clipPath={`url(#${bottomClipId})`}>
                     <path
                       d={`M 17 75 L 17 ${bottomShoulderY} Q 32 ${bottomMoundPeakY} 47 ${bottomShoulderY} L 47 75 Z`}
-                      fill="#C8A984"
-                      fillOpacity="0.88"
+                      fill="#C4A27A"
+                      fillOpacity="0.9"
                     />
                   </g>
                 )}
@@ -259,19 +259,19 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
 
             <div className="min-w-0">
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
-                <span className="text-[11px] uppercase tracking-[0.16em] text-[#8C6D53] dark:text-[#B79373]">
+                <span className="text-[11px] uppercase tracking-[0.16em] text-[#7D5E43] dark:text-[#BEA080]">
                   Đồng hồ cát phiên trà
                 </span>
                 <span
                   aria-label={`Thời gian còn lại ${timeFormatted}`}
-                  className="font-serif-editorial text-2xl sm:text-[26px] font-medium text-[#2C2C2C] dark:text-[#EAE4D9] tabular-nums leading-none"
+                  className="font-serif-editorial text-2xl sm:text-[26px] font-medium text-[#1B1917] dark:text-[#EDE5D5] tabular-nums leading-none"
                 >
                   {timeFormatted}
                 </span>
               </div>
               <p
                 aria-live={isFinished ? 'polite' : 'off'}
-                className="text-xs sm:text-[13px] text-[#6E6A63] dark:text-[#A6A095] mt-1 leading-relaxed"
+                className="text-xs sm:text-[13px] text-[#5C554C] dark:text-[#A89F91] mt-1 leading-relaxed"
               >
                 {statusCopy}
               </p>
@@ -283,7 +283,7 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
             <div
               role="group"
               aria-label="Thời lượng đồng hồ cát"
-              className="inline-flex items-center rounded-xl bg-[#FDFBF7]/85 dark:bg-[#161513]/85 border border-[#2C2C2C]/10 dark:border-[#EAE4D9]/12 p-0.5"
+              className="inline-flex items-center rounded-xl bg-[#F9F5EB]/90 dark:bg-[#12110F]/85 border border-[#1B1917]/12 dark:border-[#EDE5D5]/12 p-0.5"
             >
               {HOURGLASS_PRESET_MINUTES.map((mins) => {
                 const selected = durationMinutes === mins;
@@ -293,10 +293,10 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
                     type="button"
                     aria-pressed={selected}
                     onClick={() => handleSelectDuration(mins)}
-                    className={`px-3 py-1.5 rounded-[10px] text-xs font-medium whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E] ${
+                    className={`px-3 py-1.5 rounded-[10px] text-xs font-medium whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546] ${
                       selected
-                        ? 'bg-[#4A5D4E] text-[#FDFBF7] dark:bg-[#6E8572] dark:text-[#161513]'
-                        : 'text-[#6E6A63] dark:text-[#A6A095] hover:text-[#2C2C2C] dark:hover:text-[#EAE4D9]'
+                        ? 'bg-[#425546] text-[#F9F5EB] dark:bg-[#728B77] dark:text-[#12110F]'
+                        : 'text-[#5C554C] dark:text-[#A89F91] hover:text-[#1B1917] dark:hover:text-[#EDE5D5]'
                     }`}
                   >
                     {mins} phút
@@ -308,16 +308,16 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
             <button
               type="button"
               onClick={handleToggleRun}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-[#FDFBF7] dark:bg-[#161513] border border-[#2C2C2C]/12 dark:border-[#EAE4D9]/15 text-[#2C2C2C] dark:text-[#EAE4D9] hover:border-[#4A5D4E] dark:hover:border-[#7C9481] whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-[#F9F5EB] dark:bg-[#12110F] border border-[#1B1917]/14 dark:border-[#EDE5D5]/15 text-[#1B1917] dark:text-[#EDE5D5] hover:border-[#425546] dark:hover:border-[#7E9783] whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
             >
               {isRunning && !isFinished ? (
                 <>
-                  <Pause className="w-3.5 h-3.5 text-[#8C6D53] dark:text-[#B79373]" />
+                  <Pause className="w-3.5 h-3.5 text-[#7D5E43] dark:text-[#BEA080]" />
                   <span>Tạm dừng</span>
                 </>
               ) : (
                 <>
-                  <Play className="w-3.5 h-3.5 text-[#4A5D4E] dark:text-[#7C9481]" />
+                  <Play className="w-3.5 h-3.5 text-[#425546] dark:text-[#7E9783]" />
                   <span>{isFinished ? 'Bắt đầu lại' : 'Tiếp tục'}</span>
                 </>
               )}
@@ -326,7 +326,7 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
             <button
               type="button"
               onClick={handleReset}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-[#FDFBF7] dark:bg-[#161513] border border-[#2C2C2C]/12 dark:border-[#EAE4D9]/15 text-[#6E6A63] dark:text-[#A6A095] hover:text-[#2C2C2C] dark:hover:text-[#EAE4D9] hover:border-[#8C6D53] whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-[#F9F5EB] dark:bg-[#12110F] border border-[#1B1917]/14 dark:border-[#EDE5D5]/15 text-[#5C554C] dark:text-[#A89F91] hover:text-[#1B1917] dark:hover:text-[#EDE5D5] hover:border-[#7D5E43] whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Lật lại</span>
@@ -336,7 +336,7 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
               <button
                 type="button"
                 onClick={onOpenMemoir}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-[#A63A3A] hover:bg-[#8E3030] text-[#FDFBF7] whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A63A3A]"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-[#A63A3A] hover:bg-[#8E3030] text-[#F9F5EB] whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A63A3A]"
               >
                 <span>Lưu Trà Ký</span>
               </button>
@@ -349,13 +349,13 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
       {isScrolledPast && (
         <aside
           aria-label="Đồng hồ phiên trà thu gọn"
-          className="fixed bottom-4 left-4 z-30 flex items-center gap-2.5 sm:gap-3 rounded-xl bg-[#FDFBF7] dark:bg-[#201E1B] border border-[#2C2C2C]/14 dark:border-[#EAE4D9]/16 shadow-md px-3 py-2 sm:px-3.5 sm:py-2.5 transition-all duration-300"
+          className="fixed bottom-4 left-4 z-30 flex items-center gap-2.5 sm:gap-3 rounded-xl bg-[#F9F5EB] dark:bg-[#1B1916] border border-[#1B1917]/15 dark:border-[#EDE5D5]/16 shadow-md px-3 py-2 sm:px-3.5 sm:py-2.5 transition-all duration-300"
         >
           <button
             type="button"
             onClick={scrollToMainHourglass}
             aria-label={`Cuộn lên đồng hồ cát chính (${timeFormatted})`}
-            className="flex items-center gap-2 text-left rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+            className="flex items-center gap-2 text-left rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
           >
             {/* Compact Mini Hourglass SVG */}
             {isFinished ? (
@@ -367,7 +367,7 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
                 viewBox="0 0 24 32"
                 fill="none"
                 aria-hidden="true"
-                className="text-[#8C6D53] dark:text-[#B79373] shrink-0"
+                className="text-[#7D5E43] dark:text-[#BEA080] shrink-0"
               >
                 <rect x="4" y="2" width="16" height="2" rx="1" fill="currentColor" />
                 <rect x="4" y="28" width="16" height="2" rx="1" fill="currentColor" />
@@ -383,7 +383,7 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
                     y1="16"
                     x2="12"
                     y2="26"
-                    stroke="#C8A984"
+                    stroke="#C4A27A"
                     strokeWidth="1.2"
                     className="animate-sand-stream"
                   />
@@ -392,21 +392,21 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
             )}
 
             <div className="leading-tight">
-              <span className="block font-serif-editorial text-sm sm:text-base font-medium text-[#2C2C2C] dark:text-[#EAE4D9] tabular-nums">
+              <span className="block font-serif-editorial text-sm sm:text-base font-medium text-[#1B1917] dark:text-[#EDE5D5] tabular-nums">
                 {timeFormatted}
               </span>
-              <span className="hidden sm:block text-[11px] text-[#6E6A63] dark:text-[#A6A095] whitespace-nowrap">
+              <span className="hidden sm:block text-[11px] text-[#5C554C] dark:text-[#A89F91] whitespace-nowrap">
                 {isFinished ? 'Chuông đã ngân' : isRunning ? 'Đang chảy cát' : 'Tạm dừng'}
               </span>
             </div>
           </button>
 
-          <div className="flex items-center gap-1 pl-1.5 border-l border-[#2C2C2C]/10 dark:border-[#EAE4D9]/12">
+          <div className="flex items-center gap-1 pl-1.5 border-l border-[#1B1917]/12 dark:border-[#EDE5D5]/12">
             <button
               type="button"
               onClick={handleToggleRun}
               aria-label={isFinished ? 'Bắt đầu lại đồng hồ' : isRunning ? 'Tạm dừng đồng hồ' : 'Tiếp tục đồng hồ'}
-              className="p-1.5 rounded-lg text-[#4A5D4E] dark:text-[#7C9481] hover:bg-[#F4EFE6] dark:hover:bg-[#2A2723] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+              className="p-1.5 rounded-lg text-[#425546] dark:text-[#7E9783] hover:bg-[#E8DFCE] dark:hover:bg-[#23201C] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
             >
               {isRunning && !isFinished ? (
                 <Pause className="w-3.5 h-3.5" />
@@ -419,7 +419,7 @@ export const TeaHourglass: React.FC<TeaHourglassProps> = ({ onOpenMemoir }) => {
               type="button"
               onClick={handleReset}
               aria-label="Lật lại đồng hồ"
-              className="p-1.5 rounded-lg text-[#6E6A63] dark:text-[#A6A095] hover:text-[#2C2C2C] dark:hover:text-[#EAE4D9] hover:bg-[#F4EFE6] dark:hover:bg-[#2A2723] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+              className="p-1.5 rounded-lg text-[#5C554C] dark:text-[#A89F91] hover:text-[#1B1917] dark:hover:text-[#EDE5D5] hover:bg-[#E8DFCE] dark:hover:bg-[#23201C] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
             >
               <RotateCcw className="w-3.5 h-3.5" />
             </button>

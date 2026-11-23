@@ -315,7 +315,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7] dark:bg-[#161513] text-[#2C2C2C] dark:text-[#EAE4D9] transition-colors duration-500">
+    <div className="min-h-screen bg-transparent text-[#1B1917] dark:text-[#EDE5D5] transition-colors duration-500">
       <HeaderBar
         currentScreen={screen}
         hasUserProfile={hasProfile}

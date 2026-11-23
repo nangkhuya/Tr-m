@@ -58,9 +58,9 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
   return (
     <main className="max-w-5xl mx-auto px-4 sm:px-8 py-10 sm:py-14">
       {/* Guest greeting bar */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-8 border-b border-[#2C2C2C]/10 dark:border-[#EAE4D9]/10">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-8 border-b border-[#1B1917]/12 dark:border-[#EDE5D5]/12">
         <div>
-          <div className="flex items-center gap-3 text-xs sm:text-sm text-[#6E6A63] dark:text-[#A6A095]">
+          <div className="flex items-center gap-3 text-xs sm:text-sm text-[#5C554C] dark:text-[#A89F91]">
             <TeacupIcon
               liquorColor={tea.liquorColor}
               liquorHighlight={tea.liquorHighlight}
@@ -68,16 +68,16 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
               size={30}
             />
             <span>
-              Chào tri kỷ <strong className="font-medium text-[#2C2C2C] dark:text-[#EAE4D9]">{userName}</strong>
+              Chào tri kỷ <strong className="font-medium text-[#1B1917] dark:text-[#EDE5D5]">{userName}</strong>
             </span>
             <span aria-hidden="true">·</span>
             <span>{tea.name}</span>
           </div>
 
-          <h1 className="font-serif-editorial text-3xl sm:text-4xl font-medium text-[#2C2C2C] dark:text-[#EAE4D9] mt-3">
+          <h1 className="font-serif-editorial text-3xl sm:text-4xl font-medium text-[#1B1917] dark:text-[#EDE5D5] mt-3">
             Sảnh Trà Thất
           </h1>
-          <p className="text-sm sm:text-base text-[#6E6A63] dark:text-[#A6A095] mt-2 max-w-xl leading-relaxed">
+          <p className="text-sm sm:text-base text-[#5C554C] dark:text-[#A89F91] mt-2 max-w-xl leading-relaxed">
             Mỗi bàn trà giới hạn tối đa 5 người để giữ trọn vẹn sự lắng nghe và ấm cúng. Hãy chọn
             một hiên trà hoặc mở một bàn mới.
           </p>
@@ -86,7 +86,7 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
         <button
           type="button"
           onClick={() => setShowCreateModal(true)}
-          className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#4A5D4E] hover:bg-[#3D4E41] dark:bg-[#6E8572] dark:hover:bg-[#7C9481] text-[#FDFBF7] dark:text-[#161513] text-sm font-medium transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+          className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#425546] hover:bg-[#354639] dark:bg-[#728B77] dark:hover:bg-[#829C87] text-[#F9F5EB] dark:text-[#12110F] text-sm font-medium transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
         >
           <Plus className="w-4 h-4" />
           <span>Tạo Trà Thất Mới</span>
@@ -100,13 +100,13 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
           return (
             <article
               key={room.id}
-              className="flex flex-col justify-between p-6 rounded-xl bg-[#F4EFE6]/70 dark:bg-[#201E1B] border border-[#2C2C2C]/10 dark:border-[#EAE4D9]/12 transition-all duration-400 hover:border-[#8C6D53]/45"
+              className="flex flex-col justify-between p-6 rounded-xl bg-[#E8DFCE]/75 dark:bg-[#1B1916] border border-[#1B1917]/12 dark:border-[#EDE5D5]/12 transition-all duration-400 hover:border-[#7D5E43]/45"
             >
               <div>
-                <h2 className="font-serif-editorial text-xl font-medium text-[#2C2C2C] dark:text-[#EAE4D9]">
+                <h2 className="font-serif-editorial text-xl font-medium text-[#1B1917] dark:text-[#EDE5D5]">
                   {room.name}
                 </h2>
-                <p className="text-xs text-[#6E6A63] dark:text-[#A6A095] mt-2">
+                <p className="text-xs text-[#5C554C] dark:text-[#A89F91] mt-2">
                   {room.topic} <span aria-hidden="true">·</span>{' '}
                   <span className="tabular-nums">
                     {room.participantsCount}/{room.maxSeats} chỗ
@@ -114,20 +114,20 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
                   <span aria-hidden="true">·</span> {getBackdropLabel(room.backdrop)}
                 </p>
 
-                <p className="text-sm text-[#2C2C2C]/85 dark:text-[#EAE4D9]/85 mt-4 leading-relaxed">
+                <p className="text-sm text-[#1B1917]/88 dark:text-[#EDE5D5]/88 mt-4 leading-relaxed">
                   “{room.subtitle}”
                 </p>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-[#2C2C2C]/8 dark:border-[#EAE4D9]/10 flex items-center justify-between gap-3">
-                <span className="text-xs text-[#8C6D53] dark:text-[#B79373]">
+              <div className="pt-6 mt-6 border-t border-[#1B1917]/10 dark:border-[#EDE5D5]/10 flex items-center justify-between gap-3">
+                <span className="text-xs text-[#7D5E43] dark:text-[#BEA080]">
                   {joinable ? 'Còn chỗ ngồi ấm' : 'Bàn đã đủ tri kỷ'}
                 </span>
                 <button
                   type="button"
                   disabled={!joinable}
                   onClick={() => onJoinRoom(room)}
-                  className="px-4 py-2 rounded-lg text-sm font-medium bg-[#FDFBF7] dark:bg-[#161513] text-[#2C2C2C] dark:text-[#EAE4D9] border border-[#2C2C2C]/15 dark:border-[#EAE4D9]/18 hover:border-[#4A5D4E] hover:text-[#4A5D4E] dark:hover:text-[#7C9481] disabled:opacity-45 disabled:cursor-not-allowed transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+                  className="px-4 py-2 rounded-lg text-sm font-medium bg-[#F9F5EB] dark:bg-[#12110F] text-[#1B1917] dark:text-[#EDE5D5] border border-[#1B1917]/15 dark:border-[#EDE5D5]/18 hover:border-[#425546] hover:text-[#425546] dark:hover:text-[#7E9783] disabled:opacity-45 disabled:cursor-not-allowed transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
                 >
                   Vào bàn trà
                 </button>
@@ -143,18 +143,18 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
           role="dialog"
           aria-modal="true"
           aria-labelledby="create-room-title"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#2C2C2C]/55 dark:bg-black/70"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#1B1917]/55 dark:bg-black/75"
         >
-          <div className="w-full max-w-lg rounded-2xl bg-[#FDFBF7] dark:bg-[#1D1B18] border border-[#2C2C2C]/12 dark:border-[#EAE4D9]/15 p-6 sm:p-8 shadow-xl">
-            <div className="flex items-start justify-between gap-4 pb-4 border-b border-[#2C2C2C]/10 dark:border-[#EAE4D9]/10">
+          <div className="w-full max-w-lg rounded-2xl bg-[#F3EDE0] dark:bg-[#1B1916] border border-[#1B1917]/14 dark:border-[#EDE5D5]/15 p-6 sm:p-8 shadow-xl">
+            <div className="flex items-start justify-between gap-4 pb-4 border-b border-[#1B1917]/12 dark:border-[#EDE5D5]/12">
               <div>
                 <h2
                   id="create-room-title"
-                  className="font-serif-editorial text-2xl font-medium text-[#2C2C2C] dark:text-[#EAE4D9]"
+                  className="font-serif-editorial text-2xl font-medium text-[#1B1917] dark:text-[#EDE5D5]"
                 >
                   Mở Trà Thất Mới
                 </h2>
-                <p className="text-xs text-[#6E6A63] dark:text-[#A6A095] mt-1">
+                <p className="text-xs text-[#5C554C] dark:text-[#A89F91] mt-1">
                   Tối đa 5 người · Thầy Tuệ Minh và ba trà khách sẽ cùng ngồi tiếp bạn
                 </p>
               </div>
@@ -162,7 +162,7 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
                 type="button"
                 onClick={() => setShowCreateModal(false)}
                 aria-label="Đóng hộp thoại tạo trà thất"
-                className="p-2 rounded-lg text-[#6E6A63] hover:text-[#2C2C2C] dark:text-[#A6A095] dark:hover:text-[#EAE4D9] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+                className="p-2 rounded-lg text-[#5C554C] hover:text-[#1B1917] dark:text-[#A89F91] dark:hover:text-[#EDE5D5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -172,7 +172,7 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
               <div>
                 <label
                   htmlFor="new-room-name"
-                  className="block text-sm font-medium text-[#2C2C2C] dark:text-[#EAE4D9] mb-1.5"
+                  className="block text-sm font-medium text-[#1B1917] dark:text-[#EDE5D5] mb-1.5"
                 >
                   Tên Trà Thất
                 </label>
@@ -186,14 +186,14 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
                   }}
                   placeholder="Ví dụ: Góc Sương Mai, Hiên Cũ..."
                   maxLength={48}
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#F4EFE6] dark:bg-[#26231F] text-[#2C2C2C] dark:text-[#EAE4D9] border border-[#2C2C2C]/12 dark:border-[#EAE4D9]/15 focus:outline-none focus:ring-2 focus:ring-[#4A5D4E]"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#F9F5EB] dark:bg-[#23201C] text-[#1B1917] dark:text-[#EDE5D5] border border-[#1B1917]/14 dark:border-[#EDE5D5]/15 focus:outline-none focus:ring-2 focus:ring-[#425546]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="new-room-topic"
-                  className="block text-sm font-medium text-[#2C2C2C] dark:text-[#EAE4D9] mb-1.5"
+                  className="block text-sm font-medium text-[#1B1917] dark:text-[#EDE5D5] mb-1.5"
                 >
                   Chủ đề đàm đạo
                 </label>
@@ -207,14 +207,14 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
                   }}
                   placeholder="Ví dụ: Học cách buông bỏ, Ký ức mùa thu..."
                   maxLength={56}
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#F4EFE6] dark:bg-[#26231F] text-[#2C2C2C] dark:text-[#EAE4D9] border border-[#2C2C2C]/12 dark:border-[#EAE4D9]/15 focus:outline-none focus:ring-2 focus-visible:ring-[#4A5D4E]"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#F9F5EB] dark:bg-[#23201C] text-[#1B1917] dark:text-[#EDE5D5] border border-[#1B1917]/14 dark:border-[#EDE5D5]/15 focus:outline-none focus:ring-2 focus-visible:ring-[#425546]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="new-room-subtitle"
-                  className="block text-sm font-medium text-[#2C2C2C] dark:text-[#EAE4D9] mb-1.5"
+                  className="block text-sm font-medium text-[#1B1917] dark:text-[#EDE5D5] mb-1.5"
                 >
                   Lời đề từ ngắn (tùy chọn)
                 </label>
@@ -225,12 +225,12 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
                   onChange={(e) => setSubtitle(e.target.value)}
                   placeholder="Một câu gợi cảm hứng cho khách bước vào..."
                   maxLength={90}
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#F4EFE6] dark:bg-[#26231F] text-[#2C2C2C] dark:text-[#EAE4D9] border border-[#2C2C2C]/12 dark:border-[#EAE4D9]/15 focus:outline-none focus:ring-2 focus:ring-[#4A5D4E]"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#F9F5EB] dark:bg-[#23201C] text-[#1B1917] dark:text-[#EDE5D5] border border-[#1B1917]/14 dark:border-[#EDE5D5]/15 focus:outline-none focus:ring-2 focus:ring-[#425546]"
                 />
               </div>
 
               <div>
-                <span className="block text-sm font-medium text-[#2C2C2C] dark:text-[#EAE4D9] mb-2">
+                <span className="block text-sm font-medium text-[#1B1917] dark:text-[#EDE5D5] mb-2">
                   Khung cảnh nền
                 </span>
                 <div className="grid grid-cols-1 gap-2.5">
@@ -242,16 +242,16 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
                         type="button"
                         onClick={() => setBackdrop(item.id)}
                         aria-pressed={active}
-                        className={`text-left px-4 py-2.5 rounded-lg border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E] ${
+                        className={`text-left px-4 py-2.5 rounded-lg border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546] ${
                           active
-                            ? 'bg-[#F4EFE6] dark:bg-[#2A2621] border-[#4A5D4E] dark:border-[#7C9481]'
-                            : 'bg-transparent border-[#2C2C2C]/10 dark:border-[#EAE4D9]/12 hover:border-[#8C6D53]/40'
+                            ? 'bg-[#F9F5EB] dark:bg-[#24211D] border-[#425546] dark:border-[#7E9783]'
+                            : 'bg-transparent border-[#1B1917]/12 dark:border-[#EDE5D5]/12 hover:border-[#7D5E43]/40'
                         }`}
                       >
-                        <span className="block text-sm font-medium text-[#2C2C2C] dark:text-[#EAE4D9]">
+                        <span className="block text-sm font-medium text-[#1B1917] dark:text-[#EDE5D5]">
                           {item.label}
                         </span>
-                        <span className="block text-xs text-[#6E6A63] dark:text-[#A6A095] mt-0.5">
+                        <span className="block text-xs text-[#5C554C] dark:text-[#A89F91] mt-0.5">
                           {item.subtitle}
                         </span>
                       </button>
@@ -266,17 +266,17 @@ export const TeaLobbyScreen: React.FC<TeaLobbyScreenProps> = ({
                 </p>
               )}
 
-              <div className="flex items-center justify-end gap-3 pt-3 border-t border-[#2C2C2C]/10 dark:border-[#EAE4D9]/10">
+              <div className="flex items-center justify-end gap-3 pt-3 border-t border-[#1B1917]/12 dark:border-[#EDE5D5]/12">
                 <button
                   type="button"
                   onClick={() => setShowCreateModal(false)}
-                  className="px-4 py-2 rounded-lg text-sm text-[#6E6A63] dark:text-[#A6A095] hover:text-[#2C2C2C] dark:hover:text-[#EAE4D9]"
+                  className="px-4 py-2 rounded-lg text-sm text-[#5C554C] dark:text-[#A89F91] hover:text-[#1B1917] dark:hover:text-[#EDE5D5]"
                 >
                   Hủy
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2.5 rounded-lg bg-[#4A5D4E] hover:bg-[#3D4E41] dark:bg-[#6E8572] dark:hover:bg-[#7C9481] text-[#FDFBF7] dark:text-[#161513] text-sm font-medium transition-colors"
+                  className="px-5 py-2.5 rounded-lg bg-[#425546] hover:bg-[#354639] dark:bg-[#728B77] dark:hover:bg-[#829C87] text-[#F9F5EB] dark:text-[#12110F] text-sm font-medium transition-colors"
                 >
                   Mở Trà Thất
                 </button>

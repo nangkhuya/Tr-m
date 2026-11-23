@@ -20,13 +20,13 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
   onNavigate,
 }) => {
   return (
-    <header className="sticky top-0 z-30 border-b border-[#2C2C2C]/10 dark:border-[#EAE4D9]/10 bg-[#FDFBF7]/92 dark:bg-[#161513]/92 backdrop-blur-md transition-colors duration-500">
+    <header className="sticky top-0 z-30 border-b border-[#1B1917]/12 dark:border-[#EDE5D5]/12 bg-[#F3EDE0]/92 dark:bg-[#12110F]/92 backdrop-blur-md transition-colors duration-500">
       <div className="max-w-6xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between gap-8">
         {/* Zone 1: Single-line Brand Wordmark */}
         <button
           type="button"
           onClick={() => onNavigate(hasUserProfile ? 'lobby' : 'ritual')}
-          className="font-serif-editorial text-xl sm:text-2xl font-semibold tracking-tight text-[#2C2C2C] dark:text-[#EAE4D9] whitespace-nowrap shrink-0 hover:text-[#4A5D4E] dark:hover:text-[#7C9481] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E] rounded"
+          className="font-serif-editorial text-xl sm:text-2xl font-semibold tracking-tight text-[#1B1917] dark:text-[#EDE5D5] whitespace-nowrap shrink-0 hover:text-[#425546] dark:hover:text-[#7E9783] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546] rounded"
         >
           Trà Đàm
         </button>
@@ -36,10 +36,10 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
           <button
             type="button"
             onClick={() => onNavigate('ritual')}
-            className={`whitespace-nowrap shrink-0 py-1 border-b transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E] ${
+            className={`whitespace-nowrap shrink-0 py-1 border-b transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546] ${
               currentScreen === 'ritual'
-                ? 'border-[#4A5D4E] text-[#2C2C2C] dark:border-[#7C9481] dark:text-[#EAE4D9] font-medium'
-                : 'border-transparent text-[#6E6A63] dark:text-[#A6A095] hover:text-[#2C2C2C] dark:hover:text-[#EAE4D9]'
+                ? 'border-[#425546] text-[#1B1917] dark:border-[#7E9783] dark:text-[#EDE5D5] font-medium'
+                : 'border-transparent text-[#5C554C] dark:text-[#A89F91] hover:text-[#1B1917] dark:hover:text-[#EDE5D5]'
             }`}
           >
             Khai Trà
@@ -49,12 +49,12 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
             type="button"
             disabled={!hasUserProfile}
             onClick={() => onNavigate('lobby')}
-            className={`whitespace-nowrap shrink-0 py-1 border-b transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E] ${
+            className={`whitespace-nowrap shrink-0 py-1 border-b transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546] ${
               !hasUserProfile
-                ? 'border-transparent text-[#6E6A63]/40 dark:text-[#A6A095]/35 cursor-not-allowed'
+                ? 'border-transparent text-[#5C554C]/40 dark:text-[#A89F91]/35 cursor-not-allowed'
                 : currentScreen === 'lobby'
-                  ? 'border-[#4A5D4E] text-[#2C2C2C] dark:border-[#7C9481] dark:text-[#EAE4D9] font-medium'
-                  : 'border-transparent text-[#6E6A63] dark:text-[#A6A095] hover:text-[#2C2C2C] dark:hover:text-[#EAE4D9]'
+                  ? 'border-[#425546] text-[#1B1917] dark:border-[#7E9783] dark:text-[#EDE5D5] font-medium'
+                  : 'border-transparent text-[#5C554C] dark:text-[#A89F91] hover:text-[#1B1917] dark:hover:text-[#EDE5D5]'
             }`}
           >
             Sảnh Trà Thất
@@ -64,10 +64,10 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
             <button
               type="button"
               onClick={() => onNavigate('table')}
-              className={`whitespace-nowrap shrink-0 py-1 border-b transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E] ${
+              className={`whitespace-nowrap shrink-0 py-1 border-b transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546] ${
                 currentScreen === 'table'
-                  ? 'border-[#4A5D4E] text-[#2C2C2C] dark:border-[#7C9481] dark:text-[#EAE4D9] font-medium'
-                  : 'border-transparent text-[#6E6A63] dark:text-[#A6A095] hover:text-[#2C2C2C] dark:hover:text-[#EAE4D9]'
+                  ? 'border-[#425546] text-[#1B1917] dark:border-[#7E9783] dark:text-[#EDE5D5] font-medium'
+                  : 'border-transparent text-[#5C554C] dark:text-[#A89F91] hover:text-[#1B1917] dark:hover:text-[#EDE5D5]'
               }`}
             >
               Bàn Đàm Đạo
@@ -80,11 +80,11 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
           <button
             type="button"
             onClick={onToggleDarkMode}
-            aria-label={darkMode ? 'Chuyển sang ánh sáng ban ngày' : 'Chuyển sang chế độ đêm dịu mắt'}
-            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium text-[#2C2C2C] dark:text-[#EAE4D9] bg-[#F4EFE6] dark:bg-[#201E1B] border border-[#2C2C2C]/10 dark:border-[#EAE4D9]/12 hover:border-[#4A5D4E]/40 transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+            aria-label={darkMode ? 'Chuyển sang giấy dó ban ngày' : 'Chuyển sang mực tàu đêm tĩnh'}
+            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium text-[#1B1917] dark:text-[#EDE5D5] bg-[#E8DFCE] dark:bg-[#1B1916] border border-[#1B1917]/12 dark:border-[#EDE5D5]/14 hover:border-[#425546]/45 transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
           >
-            {darkMode ? <Sun className="w-4 h-4 text-[#B79373]" /> : <Moon className="w-4 h-4 text-[#4A5D4E]" />}
-            <span>{darkMode ? 'Ban ngày' : 'Đêm tĩnh'}</span>
+            {darkMode ? <Sun className="w-4 h-4 text-[#BEA080]" /> : <Moon className="w-4 h-4 text-[#425546]" />}
+            <span>{darkMode ? 'Giấy dó' : 'Mực tàu'}</span>
           </button>
         </div>
       </div>

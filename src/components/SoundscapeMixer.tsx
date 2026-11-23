@@ -73,21 +73,21 @@ export const SoundscapeMixer: React.FC<SoundscapeMixerProps> = ({ mix, onChangeM
         <div
           role="region"
           aria-label="Bộ trộn âm thanh hiên trà"
-          className="mb-3 w-80 sm:w-[344px] rounded-xl bg-[#FDFBF7] dark:bg-[#201E1B] border border-[#2C2C2C]/12 dark:border-[#EAE4D9]/14 shadow-lg p-5 transition-all duration-400"
+          className="mb-3 w-80 sm:w-[344px] rounded-xl bg-[#F9F5EB] dark:bg-[#1B1916] border border-[#1B1917]/14 dark:border-[#EDE5D5]/14 shadow-lg p-5 transition-all duration-400"
         >
-          <div className="flex items-center justify-between pb-3 border-b border-[#2C2C2C]/10 dark:border-[#EAE4D9]/10">
+          <div className="flex items-center justify-between pb-3 border-b border-[#1B1917]/12 dark:border-[#EDE5D5]/12">
             <div>
-              <h3 className="font-serif-editorial text-base font-medium text-[#2C2C2C] dark:text-[#EAE4D9]">
+              <h3 className="font-serif-editorial text-base font-medium text-[#1B1917] dark:text-[#EDE5D5]">
                 Âm Thanh Hiên Trà
               </h3>
-              <p className="text-xs text-[#6E6A63] dark:text-[#A6A095] mt-0.5">
+              <p className="text-xs text-[#5C554C] dark:text-[#A89F91] mt-0.5">
                 Không gian tự nhiên thuần Web Audio
               </p>
             </div>
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="text-xs text-[#6E6A63] dark:text-[#A6A095] hover:text-[#2C2C2C] dark:hover:text-[#EAE4D9] px-2 py-1 rounded whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+              className="text-xs text-[#5C554C] dark:text-[#A89F91] hover:text-[#1B1917] dark:hover:text-[#EDE5D5] px-2 py-1 rounded whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
             >
               Thu gọn
             </button>
@@ -103,28 +103,28 @@ export const SoundscapeMixer: React.FC<SoundscapeMixerProps> = ({ mix, onChangeM
                       type="button"
                       onClick={() => toggleGroup(key)}
                       aria-pressed={channel.enabled}
-                      className="flex items-center gap-2.5 text-left group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E] rounded py-0.5 min-w-0"
+                      className="flex items-center gap-2.5 text-left group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546] rounded py-0.5 min-w-0"
                     >
                       <span
                         className={`w-7 h-7 rounded-md inline-flex items-center justify-center shrink-0 transition-colors ${
                           channel.enabled
-                            ? 'bg-[#4A5D4E] text-[#FDFBF7] dark:bg-[#7C9481] dark:text-[#161513]'
-                            : 'bg-[#F4EFE6] text-[#6E6A63] dark:bg-[#2A2723] dark:text-[#A6A095]'
+                            ? 'bg-[#425546] text-[#F9F5EB] dark:bg-[#7E9783] dark:text-[#12110F]'
+                            : 'bg-[#E8DFCE] text-[#5C554C] dark:bg-[#23201C] dark:text-[#A89F91]'
                         }`}
                       >
                         <Icon className="w-3.5 h-3.5" />
                       </span>
                       <span className="min-w-0">
-                        <span className="block text-sm font-medium text-[#2C2C2C] dark:text-[#EAE4D9]">
+                        <span className="block text-sm font-medium text-[#1B1917] dark:text-[#EDE5D5]">
                           {label}
                         </span>
-                        <span className="block text-xs text-[#6E6A63] dark:text-[#A6A095] truncate">
+                        <span className="block text-xs text-[#5C554C] dark:text-[#A89F91] truncate">
                           {subtitle}
                         </span>
                       </span>
                     </button>
 
-                    <span className="text-xs tabular-nums text-[#6E6A63] dark:text-[#A6A095] shrink-0">
+                    <span className="text-xs tabular-nums text-[#5C554C] dark:text-[#A89F91] shrink-0">
                       {channel.enabled ? `${Math.round(channel.volume * 100)}%` : 'Tắt'}
                     </span>
                   </div>
@@ -137,33 +137,33 @@ export const SoundscapeMixer: React.FC<SoundscapeMixerProps> = ({ mix, onChangeM
                     aria-label={`Âm lượng ${label}`}
                     value={channel.volume}
                     onChange={(e) => changeVolume(key, parseFloat(e.target.value))}
-                    className="w-full accent-[#4A5D4E] dark:accent-[#7C9481] h-1.5 bg-[#F4EFE6] dark:bg-[#2A2723] rounded-lg cursor-pointer"
+                    className="w-full accent-[#425546] dark:accent-[#7E9783] h-1.5 bg-[#E8DFCE] dark:bg-[#23201C] rounded-lg cursor-pointer"
                   />
                 </div>
               );
             })}
           </div>
 
-          <div className="mt-4 pt-3.5 border-t border-[#2C2C2C]/10 dark:border-[#EAE4D9]/10">
+          <div className="mt-4 pt-3.5 border-t border-[#1B1917]/12 dark:border-[#EDE5D5]/12">
             <button
               type="button"
               onClick={toggleNaturalRandomness}
               aria-pressed={mix.naturalRandomness}
-              className="w-full flex items-center justify-between gap-3 rounded-lg px-3 py-2 bg-[#F4EFE6]/70 dark:bg-[#2A2723]/70 hover:bg-[#F4EFE6] dark:hover:bg-[#2A2723] transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+              className="w-full flex items-center justify-between gap-3 rounded-lg px-3 py-2 bg-[#E8DFCE]/75 dark:bg-[#23201C]/80 hover:bg-[#E8DFCE] dark:hover:bg-[#23201C] transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
             >
               <div className="flex items-center gap-2 min-w-0">
                 <Sparkles
                   className={`w-3.5 h-3.5 shrink-0 ${
                     mix.naturalRandomness
-                      ? 'text-[#4A5D4E] dark:text-[#7C9481]'
-                      : 'text-[#6E6A63] dark:text-[#A6A095]'
+                      ? 'text-[#425546] dark:text-[#7E9783]'
+                      : 'text-[#5C554C] dark:text-[#A89F91]'
                   }`}
                 />
                 <div className="min-w-0">
-                  <span className="block text-xs font-medium text-[#2C2C2C] dark:text-[#EAE4D9]">
+                  <span className="block text-xs font-medium text-[#1B1917] dark:text-[#EDE5D5]">
                     Nhịp ngẫu nhiên tự nhiên
                   </span>
-                  <span className="block text-[11px] text-[#6E6A63] dark:text-[#A6A095]">
+                  <span className="block text-[11px] text-[#5C554C] dark:text-[#A89F91]">
                     Biến thiên thưa thớt tự nhiên
                   </span>
                 </div>
@@ -172,8 +172,8 @@ export const SoundscapeMixer: React.FC<SoundscapeMixerProps> = ({ mix, onChangeM
               <span
                 className={`text-[11px] font-medium whitespace-nowrap shrink-0 ${
                   mix.naturalRandomness
-                    ? 'text-[#4A5D4E] dark:text-[#7C9481]'
-                    : 'text-[#6E6A63] dark:text-[#A6A095]'
+                    ? 'text-[#425546] dark:text-[#7E9783]'
+                    : 'text-[#5C554C] dark:text-[#A89F91]'
                 }`}
               >
                 {mix.naturalRandomness ? 'Đang bật' : 'Đều nhịp'}
@@ -188,16 +188,16 @@ export const SoundscapeMixer: React.FC<SoundscapeMixerProps> = ({ mix, onChangeM
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
         aria-label="Mở bộ điều chỉnh âm thanh hiên trà"
-        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#F4EFE6] dark:bg-[#201E1B] text-[#2C2C2C] dark:text-[#EAE4D9] border border-[#2C2C2C]/12 dark:border-[#EAE4D9]/14 shadow-sm hover:border-[#4A5D4E]/50 transition-all duration-300 text-xs sm:text-sm font-medium whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A5D4E]"
+        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#E8DFCE] dark:bg-[#1B1916] text-[#1B1917] dark:text-[#EDE5D5] border border-[#1B1917]/14 dark:border-[#EDE5D5]/15 shadow-sm hover:border-[#425546]/50 transition-all duration-300 text-xs sm:text-sm font-medium whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#425546]"
       >
         {activeCount > 0 ? (
-          <Volume2 className="w-4 h-4 text-[#4A5D4E] dark:text-[#7C9481]" />
+          <Volume2 className="w-4 h-4 text-[#425546] dark:text-[#7E9783]" />
         ) : (
-          <VolumeX className="w-4 h-4 text-[#6E6A63] dark:text-[#A6A095]" />
+          <VolumeX className="w-4 h-4 text-[#5C554C] dark:text-[#A89F91]" />
         )}
         <span>Âm thanh nền</span>
         {activeCount > 0 && (
-          <span className="text-xs text-[#4A5D4E] dark:text-[#7C9481] tabular-nums">
+          <span className="text-xs text-[#425546] dark:text-[#7E9783] tabular-nums">
             · {activeCount}
           </span>
         )}

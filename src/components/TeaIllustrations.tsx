@@ -44,12 +44,12 @@ export const TeacupIcon: React.FC<TeacupIconProps> = ({
         {/* Cup body */}
         <path
           d="M14 28C14 40.5 21 47 32 47C43 47 50 40.5 50 28H14Z"
-          fill="#F4EFE6"
+          fill="#EDE4D2"
           stroke={rimColor}
           strokeWidth="1.4"
         />
         {/* Cup rim */}
-        <ellipse cx="32" cy="28" rx="18" ry="6.2" fill="#FDFBF7" stroke={rimColor} strokeWidth="1.3" />
+        <ellipse cx="32" cy="28" rx="18" ry="6.2" fill="#F9F5EB" stroke={rimColor} strokeWidth="1.3" />
         {/* Tea liquor */}
         <ellipse cx="32" cy="28.5" rx="15.2" ry="4.7" fill={liquorColor} />
         {/* Subtle liquor reflection */}
@@ -98,8 +98,8 @@ export const RedSealStamp: React.FC<{ size?: 'sm' | 'md' }> = ({ size = 'md' }) 
   const dims = size === 'sm' ? 'w-11 h-11 text-[10px]' : 'w-14 h-14 text-xs';
   return (
     <div
-      className={`${dims} inline-flex flex-col items-center justify-center bg-[#A63A3A] text-[#FDFBF7] border border-[#FDFBF7]/50 p-1 select-none shrink-0`}
-      style={{ boxShadow: 'inset 0 0 0 2px #A63A3A, inset 0 0 0 3px rgba(253,251,247,0.45)' }}
+      className={`${dims} inline-flex flex-col items-center justify-center bg-[#A63A3A] text-[#F9F5EB] border border-[#F9F5EB]/50 p-1 select-none shrink-0`}
+      style={{ boxShadow: 'inset 0 0 0 2px #A63A3A, inset 0 0 0 3px rgba(249,245,235,0.45)' }}
       aria-label="Triện đỏ Trà Đàm"
     >
       <span className="font-serif-editorial font-bold leading-tight tracking-wider">TRÀ</span>
@@ -123,7 +123,7 @@ export const TeaPourRitualOverlay: React.FC<TeaPourRitualOverlayProps> = ({
     <div
       role="status"
       aria-live="polite"
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#FDFBF7]/95 dark:bg-[#161513]/95 backdrop-blur-sm transition-opacity duration-500"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#F3EDE0]/96 dark:bg-[#12110F]/96 backdrop-blur-sm transition-opacity duration-500"
     >
       <div className="relative w-64 h-64 flex items-center justify-center">
         <svg viewBox="0 0 240 240" className="w-full h-full" fill="none" aria-hidden="true">
@@ -180,11 +180,11 @@ export const TeaPourRitualOverlay: React.FC<TeaPourRitualOverlayProps> = ({
           <ellipse cx="146" cy="196" rx="44" ry="8" fill="#8C6D53" fillOpacity="0.1" />
           <path
             d="M112 162C112 184 126 194 146 194C166 194 180 184 180 162H112Z"
-            fill="#F4EFE6"
-            stroke="#8C6D53"
+            fill="#EDE4D2"
+            stroke="#7D5E43"
             strokeWidth="1.6"
           />
-          <ellipse cx="146" cy="162" rx="34" ry="9" fill="#FDFBF7" stroke="#8C6D53" strokeWidth="1.5" />
+          <ellipse cx="146" cy="162" rx="34" ry="9" fill="#F9F5EB" stroke="#7D5E43" strokeWidth="1.5" />
           <ellipse cx="146" cy="163" rx="28" ry="6.8" fill={liquorColor}>
             <animate attributeName="rx" values="6;28" dur="1.2s" fill="freeze" />
             <animate attributeName="ry" values="1.5;6.8" dur="1.2s" fill="freeze" />
@@ -192,10 +192,10 @@ export const TeaPourRitualOverlay: React.FC<TeaPourRitualOverlayProps> = ({
           <ellipse cx="141" cy="162" rx="12" ry="2.6" fill={liquorHighlight} fillOpacity="0.55" />
         </svg>
       </div>
-      <p className="font-serif-editorial text-xl text-[#2C2C2C] dark:text-[#EAE4D9] tracking-wide mt-2">
+      <p className="font-serif-editorial text-xl text-[#1B1917] dark:text-[#EDE5D5] tracking-wide mt-2">
         Khai ấm {teaName}
       </p>
-      <p className="text-sm text-[#6E6A63] dark:text-[#A6A095] mt-2">
+      <p className="text-sm text-[#5C554C] dark:text-[#A89F91] mt-2">
         Chậm lại một nhịp thở trước khi bước vào trà thất...
       </p>
     </div>
